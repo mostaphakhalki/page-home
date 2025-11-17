@@ -60,4 +60,41 @@ document.addEventListener('DOMContentLoaded', function() {
       document.body.classList.remove('menu-open');
     }
   });
+
+  //============================================   Portfolio Tab Functionality ============================================//
+  const tabBtns = document.querySelectorAll('.tab-btn');
+  const portfolioCards = document.querySelectorAll('.portfolio-card');
+
+  tabBtns.forEach(btn => {
+    btn.addEventListener('click', function() {
+      const targetTab = this.getAttribute('data-tab');
+      
+      // Remove active class from all tabs
+      tabBtns.forEach(tab => tab.classList.remove('active'));
+      
+      // Add active class to clicked tab
+      this.classList.add('active');
+      
+      // Filter portfolio cards
+      portfolioCards.forEach(card => {
+        const cardCategory = card.getAttribute('data-category');
+        
+        if (targetTab === 'tous' || cardCategory === targetTab) {
+          card.classList.remove('hidden');
+        } else {
+          card.classList.add('hidden');
+        }
+      });
+    });
+  });
+
+  // Portfolio favorite functionality
+  const favoriteButtons = document.querySelectorAll('.card-favorite');
+  
+  favoriteButtons.forEach(btn => {
+    btn.addEventListener('click', function(e) {
+      e.stopPropagation();
+      this.classList.toggle('active');
+    });
+  });
 });
