@@ -374,9 +374,6 @@ a {
 }
 
 @media (max-width: 1024px) {
-  .content-block {
-    padding: 80px 0;
-  }
   .content-block-card {
     width: 45%;
     padding: 40px 80px 40px 100px;
@@ -948,5 +945,195 @@ a {
   .portfolio .card-favorite svg {
     width: 16px;
     height: 16px;
+  }
+}
+.expertises {
+  padding: 96px 0;
+  background: #ffffff;
+}
+.expertises-header {
+  text-align: center;
+}
+.expertises-title {
+  color: #333333;
+  font-size: 56px;
+  font-weight: 700;
+  margin: 0 0 24px 0;
+  line-height: 1.2;
+}
+.expertises-description {
+  color: #6d6d6d;
+  font-size: 18px;
+  line-height: 1.6;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.expertises-swiper {
+  overflow: visible;
+}
+.expertises-swiper .swiper-slide {
+  height: auto;
+  padding: 40px 0;
+}
+.expertises-swiper .swiper-button-next,
+.expertises-swiper .swiper-button-prev {
+  color: #035a50;
+  background: #ffffff;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  margin-top: -25px;
+}
+.expertises-swiper .swiper-button-next:after,
+.expertises-swiper .swiper-button-prev:after {
+  font-size: 20px;
+  font-weight: 600;
+}
+.expertises-swiper .swiper-button-next:hover,
+.expertises-swiper .swiper-button-prev:hover {
+  background: #035a50;
+  color: #ffffff;
+}
+.expertises-swiper .swiper-button-next {
+  right: -25px;
+}
+.expertises-swiper .swiper-button-prev {
+  left: -25px;
+}
+.expertises-swiper .swiper-pagination {
+  bottom: 20px;
+}
+.expertises-swiper .swiper-pagination .swiper-pagination-bullet {
+  background: #6d6d6d;
+  opacity: 0.5;
+  width: 12px;
+  height: 12px;
+}
+.expertises-swiper .swiper-pagination .swiper-pagination-bullet-active {
+  background: #035a50;
+  opacity: 1;
+}
+
+.expertise-card {
+  background: #035a50;
+  border-radius: 8px;
+  padding: 32px;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  position: relative;
+  overflow: hidden;
+  text-align: center;
+}
+.expertise-card:hover {
+  transform: translateY(-4px);
+}
+
+.expertise-icon {
+  margin-bottom: 24px;
+  display: flex;
+  justify-content: center;
+}
+
+.icon-circle {
+  width: 70px;
+  height: 70px;
+  background: #0a976d;
+  border-radius: 50%;
+}
+
+.expertise-title {
+  color: #ffffff;
+  font-size: 24px;
+  font-weight: 700;
+  margin: 0 0 16px 0;
+  line-height: 1.3;
+}
+
+.expertise-description {
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 16px;
+  line-height: 1.6;
+  margin: 0;
+  flex-grow: 1;
+}
+
+@media (max-width: 1024px) {
+  .expertises-title {
+    font-size: 48px;
+  }
+  .expertises .expertises-swiper .swiper-button-next {
+    right: -15px;
+  }
+  .expertises .expertises-swiper .swiper-button-prev {
+    left: -15px;
+  }
+  .expertises .expertise-card {
+    padding: 32px;
+  }
+  .expertises .expertise-title {
+    font-size: 22px;
+  }
+  .expertises .expertise-description {
+    font-size: 15px;
+  }
+}
+@media (max-width: 768px) {
+  .expertises {
+    padding: 60px 0;
+  }
+  .expertises-header {
+    margin-bottom: 48px;
+  }
+  .expertises-title {
+    font-size: 36px;
+    margin-bottom: 16px;
+  }
+  .expertises-description {
+    font-size: 16px;
+  }
+  .expertises .expertises-swiper .swiper-button-next,
+  .expertises .expertises-swiper .swiper-button-prev {
+    display: none;
+  }
+  .expertises .expertise-card {
+    padding: 32px;
+  }
+  .expertises .expertise-title {
+    font-size: 20px;
+  }
+  .expertises .expertise-description {
+    font-size: 14px;
+  }
+  .expertises .icon-circle {
+    width: 50px;
+    height: 50px;
+  }
+}
+@media (max-width: 480px) {
+  .expertises-header {
+    margin-bottom: 32px;
+  }
+  .expertises-title {
+    font-size: 28px;
+  }
+  .expertises-description {
+    font-size: 14px;
+  }
+  .expertises .expertise-card {
+    padding: 20px;
+  }
+  .expertises .expertise-title {
+    font-size: 18px;
+    margin-bottom: 12px;
+  }
+  .expertises .expertise-description {
+    font-size: 13px;
+  }
+  .expertises .icon-circle {
+    width: 45px;
+    height: 45px;
   }
 }/*# sourceMappingURL=style.css.map */

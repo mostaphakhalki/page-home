@@ -209,4 +209,42 @@ document.addEventListener('DOMContentLoaded', function() {
   if (statisticsSection) {
     statsObserver.observe(statisticsSection);
   }
+
+  //============================================   Expertises Swiper ============================================//
+  
+  const expertisesSwiper = new Swiper(".expertises-swiper", {
+    slidesPerView: 4,
+    spaceBetween: 32,
+    loop: true,
+    autoplay: {
+      delay: 4000,
+      disableOnInteraction: false,
+    },
+    navigation: {
+      nextEl: ".expertises-next",
+      prevEl: ".expertises-prev",
+    },
+    pagination: {
+      el: ".expertises-pagination",
+      clickable: true,
+    },
+    breakpoints: {
+      320: {
+        slidesPerView: 1,
+        spaceBetween: 20,
+      },
+      768: {
+        slidesPerView: 2,
+        spaceBetween: 24,
+      },
+      1024: {
+        slidesPerView: 3,
+        spaceBetween: 28,
+      },
+      1200: {
+        slidesPerView: 4,
+        spaceBetween: 32,
+      },
+    },
+  });
 });
