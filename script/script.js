@@ -247,4 +247,52 @@ document.addEventListener('DOMContentLoaded', function() {
       },
     },
   });
+
+  //============================================   Trust Swiper ============================================//
+  
+  const trustSwiper = new Swiper(".trust-swiper", {
+    slidesPerView: 5,
+    spaceBetween: 16,
+    loop: true,
+    speed: 5000,
+    autoplay: {
+      delay: 0,
+      disableOnInteraction: false,
+      pauseOnMouseEnter: false,
+      reverseDirection: false,
+    },
+    freeMode: true,
+    freeModeMomentum: true,
+    // effect: 'fade',
+    // fadeEffect: {
+    //   crossFade: true
+    // },
+
+    // navigation: {
+    //   nextEl: ".trust-next",
+    //   prevEl: ".trust-prev",
+    // },
+    // pagination: {
+    //   el: ".trust-pagination",
+    //   clickable: true,
+    // },
+    breakpoints: {
+      320: {
+        slidesPerView: 4,
+        spaceBetween: 16,
+      },
+      480: {
+        slidesPerView: 4,
+        spaceBetween: 20,
+      },
+      768: {
+        slidesPerView: 5,
+        spaceBetween: 20,
+      },
+      1024: {
+        slidesPerView: 5,
+        spaceBetween: 24,
+      },
+    },
+  });
 });

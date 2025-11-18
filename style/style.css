@@ -1136,4 +1136,107 @@ a {
     width: 45px;
     height: 45px;
   }
+}
+.trust {
+  padding: 80px 0;
+  background: #ffffff;
+}
+.trust .swiper-wrapper {
+  justify-content: center;
+  height: 150px;
+}
+.trust-header {
+  text-align: center;
+}
+.trust-title {
+  color: #ffffff;
+  font-size: 48px;
+  font-weight: 700;
+  margin: 0;
+  line-height: 1.2;
+}
+.trust-content {
+  background-color: #035a50;
+  padding: 64px 32px 32px;
+  max-width: 1036px;
+  margin: auto;
+  border-radius: 8px;
+}
+
+.trust-swiper {
+  overflow: auto;
+}
+.trust-swiper .swiper-slide {
+  height: auto;
+  display: flex;
+  justify-content: center;
+}
+
+.trust-card {
+  width: 100%;
+  max-width: 156px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+}
+.trust-card:hover {
+  transform: scale(1.1);
+}
+
+.trust-logo {
+  width: 156px;
+  height: 64px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.trust-logo img {
+  max-width: 100%;
+  max-height: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+  filter: brightness(0) invert(1);
+  opacity: 0.9;
+  transition: opacity 0.3s ease;
+}
+.trust-logo:hover img {
+  opacity: 1;
+}
+
+@media (max-width: 1024px) {
+  .trust {
+    padding: 60px 0;
+  }
+  .trust-title {
+    font-size: 42px;
+  }
+  .trust .trust-swiper .swiper-button-next {
+    right: -15px;
+  }
+  .trust .trust-swiper .swiper-button-prev {
+    left: -15px;
+  }
+  .trust .trust-logo {
+    height: 50px;
+  }
+}
+@media (max-width: 768px) {
+  .trust {
+    padding: 50px 0;
+  }
+  .trust-title {
+    font-size: 36px;
+  }
+  .trust .trust-logo {
+    height: 45px;
+  }
+}
+@media (max-width: 480px) {
+  .trust {
+    padding: 40px 0;
+  }
+  .trust .trust-logo {
+    height: 40px;
+  }
 }/*# sourceMappingURL=style.css.map */
