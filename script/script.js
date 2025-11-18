@@ -97,4 +97,116 @@ document.addEventListener('DOMContentLoaded', function() {
       this.classList.toggle('active');
     });
   });
+
+  //============================================   Statistics Rolling Animation ============================================//
+  
+  // Function to animate numbers
+  function animateNumber(element, start, end, duration, suffix = '', prefix = '') {
+    let startTimestamp = null;
+    
+    // Add animating class
+    element.classList.add('animating');
+    
+    const step = (timestamp) => {
+      if (!startTimestamp) startTimestamp = timestamp;
+      const progress = Math.min((timestamp - startTimestamp) / duration, 1);
+      
+      // Easing function for smooth animation
+      const easeOutQuart = 1 - Math.pow(1 - progress, 4);
+      
+      const current = Math.floor(easeOutQuart * (end - start) + start);
+      element.textContent = prefix + current + suffix;
+      
+      if (progress < 1) {
+        window.requestAnimationFrame(step);
+      } else {
+        element.textContent = prefix + end + suffix;
+        // Remove animating class when done
+        element.classList.remove('animating');
+      }
+    };
+    window.requestAnimationFrame(step);
+  }
+
+  // Function to parse number from text content
+  function parseStatNumber(text) {
+    const hasPlus = text.includes('+');
+    const hasPercent = text.includes('%');
+    const hasM = text.includes('M');
+    
+    let prefix = '';
+    let suffix = '';
+    let multiplier = 1;
+    
+    if (text.startsWith('+')) {
+      prefix = '+';
+    }
+    
+    if (hasPlus && !text.startsWith('+')) {
+      suffix = '+';
+    }
+    
+    if (hasPercent) {
+      suffix = '%';
+    }
+    
+    if (hasM) {
+      suffix = 'M';
+      multiplier = 1;
+    }
+    
+    // Extract the number
+    const numberStr = text.replace(/[+%M]/g, '');
+    const number = parseInt(numberStr) || 0;
+    
+    return {
+      number: number,
+      prefix: prefix,
+      suffix: suffix,
+      multiplier: multiplier
+    };
+  }
+
+  // Intersection Observer for statistics animation
+  const observerOptions = {
+    threshold: 0.5,
+    rootMargin: '0px 0px -50px 0px'
+  };
+
+  const statsObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        const statNumbers = entry.target.querySelectorAll('.stat-number');
+        
+        statNumbers.forEach((numberElement, index) => {
+          const originalText = numberElement.textContent;
+          const parsed = parseStatNumber(originalText);
+          
+          // Reset to 0 before animation
+          numberElement.textContent = parsed.prefix + '0' + parsed.suffix;
+          
+          // Start animation with delay for each number
+          setTimeout(() => {
+            animateNumber(
+              numberElement,
+              0,
+              parsed.number,
+              2000 + (index * 200), // 2s base + 200ms delay per item
+              parsed.suffix,
+              parsed.prefix
+            );
+          }, index * 300); // 300ms delay between each number
+        });
+        
+        // Unobserve after animation starts
+        statsObserver.unobserve(entry.target);
+      }
+    });
+  }, observerOptions);
+
+  // Observe the statistics section
+  const statisticsSection = document.querySelector('.statistics');
+  if (statisticsSection) {
+    statsObserver.observe(statisticsSection);
+  }
 });

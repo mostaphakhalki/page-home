@@ -612,6 +612,11 @@ a {
   margin-bottom: 16px;
   line-height: 130%;
   letter-spacing: 0.5px;
+  transition: all 0.3s ease;
+  
+  &.animating {
+    transform: scale(1.05);
+  }
 }
 
 .stat-description {
