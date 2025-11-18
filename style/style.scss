@@ -1629,16 +1629,18 @@ a {
   }
 
   &-form-description {
-    color: rgba(255, 255, 255, 0.9);
-    font-size: 16px;
-    line-height: 1.6;
-    margin: 0;
+    color: #F5FAF0;
+    font-size: 24px;
+    font-weight: bold;
+    line-height: 1.110.00000000000001%;
+    letter-spacing: 0.5px;
+    margin-bottom: 32px;
   }
 
   &-form {
     display: flex;
     flex-direction: column;
-    gap: 20px;
+    gap: 16px;
 
     .form-group {
       position: relative;
@@ -1649,8 +1651,8 @@ a {
         position: absolute;
         top: 8px;
         left: 20px;
-        color: rgba(255, 255, 255, 0.7);
-        font-size: 16px;
+        color: $white-color;
+        font-size: 12px;
         font-weight: 400;
         pointer-events: none;
         transition: all 0.3s ease;
@@ -1673,13 +1675,13 @@ a {
         box-sizing: border-box;
 
         &::placeholder {
-          color: rgba(255, 255, 255, 0.6);
-          font-size: 16px;
+          color: #F5FAF066;
+          font-size: 14px;
         }
 
         &:focus {
           outline: none;
-          border-color: rgba(255, 255, 255, 0.8);
+          border-color: #F5FAF099;
           background: rgba(255, 255, 255, 0.08);
           transform: translateY(-1px);
           box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
@@ -1855,6 +1857,36 @@ a {
         padding: 12px 24px;
         font-size: 14px;
       }
+    }
+  }
+
+  // Form Validation Styles
+  .error-message {
+    color: #ff0000 !important;
+    font-size: 10px !important;
+    margin-top: 0px;
+    display: block;
+    font-weight: normal;
+  }
+
+  .error-input {
+    border-color: #ff6b6b !important;
+    background: rgba(255, 107, 107, 0.1) !important;
+
+    &:focus {
+      border-color: #ff6b6b !important;
+      box-shadow: 0 4px 12px rgba(255, 107, 107, 0.3) !important;
+    }
+  }
+
+  .form-submit-btn:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+    transform: none !important;
+
+    &:hover {
+      transform: none !important;
+      box-shadow: none !important;
     }
   }
 }

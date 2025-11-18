@@ -1295,15 +1295,17 @@ a {
   margin-bottom: 32px;
 }
 .parlons-form-description {
-  color: rgba(255, 255, 255, 0.9);
-  font-size: 16px;
-  line-height: 1.6;
-  margin: 0;
+  color: #F5FAF0;
+  font-size: 24px;
+  font-weight: bold;
+  line-height: 1.11 0%;
+  letter-spacing: 0.5px;
+  margin-bottom: 32px;
 }
 .parlons-form {
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: 16px;
 }
 .parlons-form .form-group {
   position: relative;
@@ -1314,8 +1316,8 @@ a {
   position: absolute;
   top: 8px;
   left: 20px;
-  color: rgba(255, 255, 255, 0.7);
-  font-size: 16px;
+  color: #ffffff;
+  font-size: 12px;
   font-weight: 400;
   pointer-events: none;
   transition: all 0.3s ease;
@@ -1337,18 +1339,18 @@ a {
   box-sizing: border-box;
 }
 .parlons-form .form-group .form-input::-moz-placeholder, .parlons-form .form-group .form-textarea::-moz-placeholder {
-  color: rgba(255, 255, 255, 0.6);
-  font-size: 16px;
+  color: rgba(245, 250, 240, 0.4);
+  font-size: 14px;
 }
 .parlons-form .form-group .form-input::placeholder,
 .parlons-form .form-group .form-textarea::placeholder {
-  color: rgba(255, 255, 255, 0.6);
-  font-size: 16px;
+  color: rgba(245, 250, 240, 0.4);
+  font-size: 14px;
 }
 .parlons-form .form-group .form-input:focus,
 .parlons-form .form-group .form-textarea:focus {
   outline: none;
-  border-color: rgba(255, 255, 255, 0.8);
+  border-color: rgba(245, 250, 240, 0.6);
   background: rgba(255, 255, 255, 0.08);
   transform: translateY(-1px);
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
@@ -1501,4 +1503,28 @@ a {
     padding: 12px 24px;
     font-size: 14px;
   }
+}
+.parlons .error-message {
+  color: #ff0000 !important;
+  font-size: 10px !important;
+  margin-top: 0px;
+  display: block;
+  font-weight: normal;
+}
+.parlons .error-input {
+  border-color: #ff6b6b !important;
+  background: rgba(255, 107, 107, 0.1) !important;
+}
+.parlons .error-input:focus {
+  border-color: #ff6b6b !important;
+  box-shadow: 0 4px 12px rgba(255, 107, 107, 0.3) !important;
+}
+.parlons .form-submit-btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  transform: none !important;
+}
+.parlons .form-submit-btn:disabled:hover {
+  transform: none !important;
+  box-shadow: none !important;
 }/*# sourceMappingURL=style.css.map */

@@ -295,4 +295,92 @@ document.addEventListener('DOMContentLoaded', function() {
       },
     },
   });
+
+  //============================================   jQuery Form Validation ============================================//
+  
+  // jQuery Form Validation for parlons form
+  $('#parlonsForm').validate({
+    rules: {
+      name: {
+        required: true,
+        minlength: 2,
+        maxlength: 50
+      },
+      surname: {
+        required: true,
+        minlength: 2,
+        maxlength: 50
+      },
+      email: {
+        required: true,
+        email: true,
+        maxlength: 100
+      },
+      message: {
+        required: true,
+        minlength: 10,
+        maxlength: 500
+      }
+    },
+    messages: {
+      name: {
+        required: "Veuillez saisir votre nom",
+        minlength: "Le nom doit contenir au moins 2 caractères",
+        maxlength: "Le nom ne peut pas dépasser 50 caractères"
+      },
+      surname: {
+        required: "Veuillez saisir votre prénom",
+        minlength: "Le prénom doit contenir au moins 2 caractères",
+        maxlength: "Le prénom ne peut pas dépasser 50 caractères"
+      },
+      email: {
+        required: "Veuillez saisir votre adresse e-mail",
+        email: "Veuillez saisir une adresse e-mail valide",
+        maxlength: "L'adresse e-mail ne peut pas dépasser 100 caractères"
+      },
+      message: {
+        required: "Veuillez saisir votre message",
+        minlength: "Le message doit contenir au moins 10 caractères",
+        maxlength: "Le message ne peut pas dépasser 500 caractères"
+      }
+    },
+    errorElement: 'span',
+    errorClass: 'error-message',
+    errorPlacement: function(error, element) {
+      error.insertAfter(element.parent());
+    },
+    highlight: function(element) {
+      $(element).addClass('error-input');
+    },
+    unhighlight: function(element) {
+      $(element).removeClass('error-input');
+    },
+    submitHandler: function(form) {
+      // Show loading state
+      const submitBtn = $(form).find('.form-submit-btn');
+      const originalText = submitBtn.text();
+      submitBtn.text('Envoi en cours...').prop('disabled', true);
+      
+      // Simulate form submission (replace with actual AJAX call)
+      setTimeout(function() {
+        // Success message
+        alert('Merci ! Votre message a été envoyé avec succès.');
+        
+        // Reset form
+        form.reset();
+        
+        // Reset button
+        submitBtn.text(originalText).prop('disabled', false);
+        
+        // Clear any remaining error states
+        $(form).find('.error-input').removeClass('error-input');
+        $(form).find('.error-message').remove();
+      }, 2000);
+    }
+  });
+  
+  // Real-time validation on input
+  $('#parlonsForm input, #parlonsForm textarea').on('blur', function() {
+    $(this).valid();
+  });
 });
