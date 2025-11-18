@@ -8,6 +8,7 @@ $gray-color: #6d6d6d;
 $gray-color-2: #f5faf0b2;
 // Font Family
 $font-family: "Inter", sans-serif;
+
 // ==================================    Global Styles
 // Swiper Section Styles
 body {
@@ -24,12 +25,15 @@ body {
     overflow: hidden;
   }
 }
+
 li {
   list-style: none;
 }
+
 a {
   text-decoration: none;
 }
+
 .btn {
   padding: 16px 32px;
   border-radius: 50px;
@@ -38,50 +42,61 @@ a {
   background: $white-color;
   font-weight: 600;
   transition: all 0.3s ease;
+
   &-outline {
     border: 1px solid $primary-color;
   }
+
   cursor: pointer;
+
   &:hover {
     background: $primary-color;
     color: $white-color;
     transform: translateY(-2px);
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
   }
+
   &::after {
     display: none;
   }
 }
+
 .container {
   max-width: 1440px;
   margin: auto;
   padding: 0 96px;
 }
+
 //============================================  Banner Section Styles
 .banner {
   height: 100vh;
   width: 100%;
   overflow: hidden;
+
   &-img {
     width: 100%;
     height: auto;
     display: block;
   }
+
   &-content {
     position: absolute;
     max-width: 50%;
     top: 50%;
     color: $white-color;
     z-index: 10;
+
     &-title {
       font-size: 21px;
     }
+
     &-soubtitle {
       font-size: 56px;
       margin: 0 16px;
       margin-left: 0;
       font-weight: bold;
     }
+
     &-description {
       font-size: 16px;
       margin-bottom: 24px;
@@ -221,6 +236,7 @@ a {
           &:hover {
             color: rgba(255, 255, 255, 0.8);
           }
+
           &::after {
             content: "";
             position: absolute;
@@ -283,9 +299,11 @@ a {
         .hamburger-line:nth-child(1) {
           transform: rotate(45deg) translate(5px, 5px);
         }
+
         .hamburger-line:nth-child(2) {
           opacity: 0;
         }
+
         .hamburger-line:nth-child(3) {
           transform: rotate(-45deg) translate(7px, -6px);
         }
@@ -395,6 +413,7 @@ a {
 //  ============================================Content Block Section Styles
 .content-block {
   padding: 96px 0;
+
   &-wrapper {
     position: relative;
     display: flex;
@@ -405,6 +424,7 @@ a {
   &-image {
     width: 688px;
     position: relative;
+
     .block-img {
       width: 100%;
       height: 568px;
@@ -571,6 +591,7 @@ a {
     }
   }
 }
+
 //  ============================================ Statistics Section Styles
 .statistics {
   padding: 96px 0;
@@ -660,10 +681,12 @@ a {
     text-align: center;
   }
 }
+
 // -------------------- propo ------------------------
 .propo {
   padding: 80px 0;
   height: 469px;
+
   &-wrapper {
     display: flex;
     height: 469px;
@@ -681,6 +704,7 @@ a {
         border-bottom-right-radius: 16px;
       }
     }
+
     &-card {
       width: 34%;
       border-bottom-left-radius: 16px;
@@ -690,15 +714,18 @@ a {
       display: flex;
       flex-direction: column;
       justify-content: center;
+
       &-label {
         color: $orange-color;
         font-size: 20px;
       }
+
       &-title {
         font-size: 56px;
         font-weight: 700;
         margin: 16px 0;
       }
+
       &-description {
         font-size: 16px;
         color: $gray-color;
@@ -840,6 +867,7 @@ a {
 // ============================================ Portfolio Section Styles
 .portfolio {
   padding: 96px 0;
+
   &-header {
     text-align: center;
     margin-bottom: 64px;
@@ -889,14 +917,17 @@ a {
   font-family: $font-family;
   width: 25%;
   text-align: center;
+
   &:hover {
     color: $white-color;
   }
+
   &.active {
     color: $white-color;
     border-bottom: 4px solid $white-color;
   }
 }
+
 .portfolio-card {
   position: relative;
   border-radius: 16px;
@@ -1166,6 +1197,7 @@ a {
 
 .expertises-swiper {
   overflow: visible;
+
   .swiper-slide {
     height: auto;
     padding: 40px 0;
@@ -1379,10 +1411,11 @@ a {
 
 // ============================================ Trust Section Styles
 .trust {
-    .swiper-wrapper{
-        justify-content: center;
-        height: 150px;
-    }
+  .swiper-wrapper {
+    justify-content: center;
+    height: 150px;
+  }
+
   padding: 80px 0;
   background: $white-color;
 
@@ -1398,9 +1431,10 @@ a {
     margin: 0;
     line-height: 1.2;
   }
+
   &-content {
     background-color: $primary-color;
-    padding:64px 32px 32px;
+    padding: 64px 32px 32px;
     max-width: 1036px;
     margin: auto;
     border-radius: 8px;
@@ -1408,7 +1442,8 @@ a {
 }
 
 .trust-swiper {
-    overflow: auto;
+  overflow: auto;
+
   .swiper-slide {
     height: auto;
     display: flex;
@@ -1529,6 +1564,297 @@ a {
 
     .trust-logo {
       height: 40px;
+    }
+  }
+}
+
+.parlons {
+  position: relative;
+  padding: 80px 0;
+  background: $white-color;
+
+  &-header {
+    text-align: center;
+    padding-bottom: 64px;
+  }
+
+  &-title {
+    color: $dark-color;
+    font-size: 56px;
+    font-weight: 700;
+    margin: 0 0 24px 0;
+    line-height: 1.2;
+  }
+
+  &-wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+    min-height: 532px;
+
+    &-image {
+      width: 612px;
+      height: 532px;
+      position: relative;
+      overflow: hidden;
+      border-radius: 8px;
+
+      .parlons-img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: 8px;
+        position: relative;
+        z-index: 3;
+      }
+    }
+
+    &-info {
+      position: absolute;
+      right: 0;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 39%;
+      background: $primary-color;
+      padding: 64px 82px 64px 156px;
+      border-radius: 8px;
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+      z-index: 2;
+      color: $white-color;
+    }
+  }
+
+  &-form-header {
+    margin-bottom: 32px;
+  }
+
+  &-form-description {
+    color: rgba(255, 255, 255, 0.9);
+    font-size: 16px;
+    line-height: 1.6;
+    margin: 0;
+  }
+
+  &-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+    .form-group {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+
+      .form-label {
+        position: absolute;
+        top: 8px;
+        left: 20px;
+        color: rgba(255, 255, 255, 0.7);
+        font-size: 16px;
+        font-weight: 400;
+        pointer-events: none;
+        transition: all 0.3s ease;
+        z-index: 1;
+      }
+
+      .form-input,
+      .form-textarea {
+        background: transparent;
+        border: 1px solid #F5FAF099;
+        border-radius: 4px;
+        padding: 35px 20px 12px 20px;
+        color: $white-color;
+        font-size: 16px;
+        font-family: $font-family;
+        transition: all 0.3s ease;
+        resize: none;
+        width: 100%;
+        height: 58px;
+        box-sizing: border-box;
+
+        &::placeholder {
+          color: rgba(255, 255, 255, 0.6);
+          font-size: 16px;
+        }
+
+        &:focus {
+          outline: none;
+          border-color: rgba(255, 255, 255, 0.8);
+          background: rgba(255, 255, 255, 0.08);
+          transform: translateY(-1px);
+          box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+
+          + .form-label,
+          ~ .form-label {
+            top: 8px;
+            font-size: 12px;
+            color: rgba(255, 255, 255, 0.9);
+            font-weight: 500;
+          }
+        }
+
+        &:not(:placeholder-shown) {
+          + .form-label,
+          ~ .form-label {
+            top: 8px;
+            font-size: 12px;
+            color: rgba(255, 255, 255, 0.9);
+            font-weight: 500;
+          }
+        }
+
+        &:hover {
+          border-color: rgba(255, 255, 255, 0.6);
+          background: rgba(255, 255, 255, 0.05);
+        }
+      }
+
+      .form-textarea {
+        min-height: 100px;
+        resize: vertical;
+        padding: 32px 20px 12px 20px;
+      }
+    }
+
+    .form-submit-btn {
+      background: $white-color;
+      color: $primary-color;
+      border: none;
+      border-radius: 25px;
+      padding: 16px 32px;
+      font-size: 16px;
+      font-weight: 600;
+      font-family: $font-family;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      margin-top: 16px;
+      align-self: flex-start;
+      min-width: 180px;
+
+      &:hover {
+        background: rgba(255, 255, 255, 0.95);
+        transform: translateY(-2px);
+        box-shadow: 0 6px 20px rgba(0, 0, 0, 0.25);
+      }
+
+      &:active {
+        transform: translateY(-1px);
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+      }
+    }
+  }
+
+  // Responsive Styles
+  @media (max-width: 1024px) {
+    padding: 60px 0;
+
+    &-title {
+      font-size: 48px;
+    }
+
+    &-wrapper {
+      &-image {
+        width: 500px;
+        height: 420px;
+      }
+
+      &-info {
+        width: 42%;
+        padding: 40px 60px 40px 80px;
+      }
+    }
+  }
+
+  @media (max-width: 768px) {
+    padding: 40px 0;
+
+    &-title {
+      font-size: 36px;
+    }
+
+    &-description {
+      font-size: 16px;
+    }
+
+    &-wrapper {
+      flex-direction: column;
+      min-height: auto;
+      gap: 32px;
+
+      &-image {
+        width: 100%;
+        height: 300px;
+        position: relative;
+      }
+
+      &-info {
+        position: relative;
+        width: 100%;
+        right: auto;
+        top: auto;
+        transform: none;
+        padding: 32px 24px;
+        border-radius: 12px;
+      }
+    }
+
+    &-form {
+      gap: 16px;
+
+      .form-group {
+        .form-input,
+        .form-textarea {
+          padding: 14px 16px;
+          font-size: 15px;
+        }
+      }
+
+      .form-submit-btn {
+        padding: 14px 28px;
+        font-size: 15px;
+        align-self: stretch;
+      }
+    }
+  }
+
+  @media (max-width: 480px) {
+    padding: 32px 0;
+
+    &-title {
+      font-size: 28px;
+    }
+
+    &-description {
+      font-size: 14px;
+    }
+
+    &-wrapper-info {
+      padding: 24px 20px;
+    }
+
+    &-form {
+      gap: 14px;
+
+      .form-group {
+        .form-label {
+          font-size: 13px;
+        }
+
+        .form-input,
+        .form-textarea {
+          padding: 12px 14px;
+          font-size: 14px;
+        }
+
+        .form-textarea {
+          min-height: 70px;
+        }
+      }
+
+      .form-submit-btn {
+        padding: 12px 24px;
+        font-size: 14px;
+      }
     }
   }
 }
