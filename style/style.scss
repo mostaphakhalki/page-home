@@ -112,14 +112,13 @@ button[onclick="togglePlayAndPause()"] {
   background: rgba(0, 0, 0, 0.7);
   border: none;
   border-radius: 50%;
-  width: 60px;
-  height: 60px;
+  width: 50px;
+  height: 50px;
   cursor: pointer;
   display: flex;
   align-items: center;
   justify-content: center;
   transition: all 0.3s ease;
-  margin-left: 20px;
   backdrop-filter: blur(10px);
 
   &:hover {
@@ -128,8 +127,8 @@ button[onclick="togglePlayAndPause()"] {
   }
 
   svg {
-    width: 48px;
-    height: 48px;
+    width: 26px;
+    height: 26px;
     color: $white-color;
     transition: all 0.3s ease;
   }
@@ -1072,6 +1071,16 @@ button[onclick="togglePlayAndPause()"] {
 .portfolio {
   padding: 96px 0;
 
+  &-btn{
+    display: flex;
+    justify-content: center;
+    margin-top: 62px;
+    button{
+     background-color: transparent;
+     color: white;
+     border: 1px solid white;
+    }
+  }
   &-header {
     text-align: center;
     margin-bottom: 64px;
@@ -2432,10 +2441,16 @@ button[onclick="togglePlayAndPause()"] {
 
   // Responsive Styles
   @media (max-width: 1024px) {
-    padding: 50px 0 20px 0;
+    padding: 48px 0;
 
-    &-content {
-      gap: 32px;
+    &-logo {
+      padding-bottom: 40px;
+      gap: 20px;
+    }
+
+    &-bottom {
+      padding-top: 32px;
+      gap: 24px;
     }
 
     &-nav {
@@ -2444,18 +2459,19 @@ button[onclick="togglePlayAndPause()"] {
   }
 
   @media (max-width: 768px) {
-    padding: 32px 0 16px 0;
-
-    &-content {
-      flex-direction: column;
-      align-items: center;
-      text-align: center;
-      gap: 20px;
-    }
+    padding: 32px 0;
 
     &-logo {
-      align-items: center;
+      flex-direction: column;
+      text-align: center;
+      padding-bottom: 24px;
       gap: 16px;
+    }
+
+    &-bottom {
+      flex-direction: column;
+      gap: 20px;
+      padding-top: 24px;
     }
 
     &-nav {
@@ -2466,10 +2482,11 @@ button[onclick="togglePlayAndPause()"] {
 
     &-social {
       gap: 12px;
+      justify-content: center;
 
       .social-link {
-        width: 32px;
-        height: 32px;
+        width: 36px;
+        height: 36px;
 
         svg {
           width: 16px;
@@ -2480,22 +2497,102 @@ button[onclick="togglePlayAndPause()"] {
 
     &-copyright {
       text-align: center;
-      font-size: 12px;
+      font-size: 13px;
+      order: 2;
+    }
+
+    &-nav {
+      order: 1;
     }
   }
 
   @media (max-width: 480px) {
+    padding: 24px 0;
+
+    &-logo {
+      padding-bottom: 20px;
+      gap: 12px;
+
+      img {
+        width: 32px;
+        height: 32px;
+      }
+    }
+
+    &-bottom {
+      gap: 16px;
+      padding-top: 20px;
+    }
+
     &-nav {
       flex-direction: column;
       gap: 12px;
+      text-align: center;
     }
 
     &-link {
       font-size: 14px;
     }
 
+    &-social {
+      gap: 10px;
+
+      .social-link {
+        width: 32px;
+        height: 32px;
+
+        svg {
+          width: 14px;
+          height: 14px;
+        }
+      }
+    }
+
     &-copyright {
       font-size: 11px;
+    }
+  }
+
+  @media (max-width: 360px) {
+    padding: 20px 0;
+
+    &-logo {
+      padding-bottom: 16px;
+
+      img {
+        width: 100px;
+      }
+    }
+
+    &-bottom {
+      gap: 12px;
+      padding-top: 16px;
+    }
+
+    &-nav {
+      gap: 8px;
+    }
+
+    &-link {
+      font-size: 13px;
+    }
+
+    &-social {
+      gap: 8px;
+
+      .social-link {
+        width: 28px;
+        height: 28px;
+
+        svg {
+          width: 12px;
+          height: 12px;
+        }
+      }
+    }
+
+    &-copyright {
+      font-size: 10px;
     }
   }
 }

@@ -85,14 +85,13 @@ button[onclick="togglePlayAndPause()"] {
   background: rgba(0, 0, 0, 0.7);
   border: none;
   border-radius: 50%;
-  width: 60px;
-  height: 60px;
+  width: 50px;
+  height: 50px;
   cursor: pointer;
   display: flex;
   align-items: center;
   justify-content: center;
   transition: all 0.3s ease;
-  margin-left: 20px;
   -webkit-backdrop-filter: blur(10px);
           backdrop-filter: blur(10px);
 }
@@ -101,8 +100,8 @@ button[onclick="togglePlayAndPause()"]:hover {
   transform: scale(1.1);
 }
 button[onclick="togglePlayAndPause()"] svg {
-  width: 48px;
-  height: 48px;
+  width: 26px;
+  height: 26px;
   color: #ffffff;
   transition: all 0.3s ease;
 }
@@ -863,6 +862,16 @@ button[onclick="togglePlayAndPause()"] svg {
 }
 .portfolio {
   padding: 96px 0;
+}
+.portfolio-btn {
+  display: flex;
+  justify-content: center;
+  margin-top: 62px;
+}
+.portfolio-btn button {
+  background-color: transparent;
+  color: white;
+  border: 1px solid white;
 }
 .portfolio-header {
   text-align: center;
@@ -1998,10 +2007,15 @@ button[onclick="togglePlayAndPause()"] svg {
 }
 @media (max-width: 1024px) {
   .footer {
-    padding: 50px 0 20px 0;
+    padding: 48px 0;
   }
-  .footer-content {
-    gap: 32px;
+  .footer-logo {
+    padding-bottom: 40px;
+    gap: 20px;
+  }
+  .footer-bottom {
+    padding-top: 32px;
+    gap: 24px;
   }
   .footer-nav {
     gap: 24px;
@@ -2009,17 +2023,18 @@ button[onclick="togglePlayAndPause()"] svg {
 }
 @media (max-width: 768px) {
   .footer {
-    padding: 32px 0 16px 0;
-  }
-  .footer-content {
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    gap: 20px;
+    padding: 32px 0;
   }
   .footer-logo {
-    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    padding-bottom: 24px;
     gap: 16px;
+  }
+  .footer-bottom {
+    flex-direction: column;
+    gap: 20px;
+    padding-top: 24px;
   }
   .footer-nav {
     flex-wrap: wrap;
@@ -2028,10 +2043,11 @@ button[onclick="togglePlayAndPause()"] svg {
   }
   .footer-social {
     gap: 12px;
+    justify-content: center;
   }
   .footer-social .social-link {
-    width: 32px;
-    height: 32px;
+    width: 36px;
+    height: 36px;
   }
   .footer-social .social-link svg {
     width: 16px;
@@ -2039,18 +2055,84 @@ button[onclick="togglePlayAndPause()"] svg {
   }
   .footer-copyright {
     text-align: center;
-    font-size: 12px;
+    font-size: 13px;
+    order: 2;
+  }
+  .footer-nav {
+    order: 1;
   }
 }
 @media (max-width: 480px) {
+  .footer {
+    padding: 24px 0;
+  }
+  .footer-logo {
+    padding-bottom: 20px;
+    gap: 12px;
+  }
+  .footer-logo img {
+    width: 32px;
+    height: 32px;
+  }
+  .footer-bottom {
+    gap: 16px;
+    padding-top: 20px;
+  }
   .footer-nav {
     flex-direction: column;
     gap: 12px;
+    text-align: center;
   }
   .footer-link {
     font-size: 14px;
   }
+  .footer-social {
+    gap: 10px;
+  }
+  .footer-social .social-link {
+    width: 32px;
+    height: 32px;
+  }
+  .footer-social .social-link svg {
+    width: 14px;
+    height: 14px;
+  }
   .footer-copyright {
     font-size: 11px;
+  }
+}
+@media (max-width: 360px) {
+  .footer {
+    padding: 20px 0;
+  }
+  .footer-logo {
+    padding-bottom: 16px;
+  }
+  .footer-logo img {
+    width: 100px;
+  }
+  .footer-bottom {
+    gap: 12px;
+    padding-top: 16px;
+  }
+  .footer-nav {
+    gap: 8px;
+  }
+  .footer-link {
+    font-size: 13px;
+  }
+  .footer-social {
+    gap: 8px;
+  }
+  .footer-social .social-link {
+    width: 28px;
+    height: 28px;
+  }
+  .footer-social .social-link svg {
+    width: 12px;
+    height: 12px;
+  }
+  .footer-copyright {
+    font-size: 10px;
   }
 }/*# sourceMappingURL=style.css.map */
