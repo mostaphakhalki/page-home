@@ -54,11 +54,24 @@ a {
   height: 100vh;
   width: 100%;
   overflow: hidden;
+  position: relative;
+}
+.banner-filter {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, rgba(0, 0, 0, 0.6) 0%, rgba(0, 0, 0, 0.3) 50%, rgba(0, 0, 0, 0.5) 100%);
+  z-index: 2;
+  pointer-events: none;
 }
 .banner-img {
   width: 100%;
   height: 100vh;
   display: block;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 .banner-video {
   width: 100%;
@@ -101,14 +114,14 @@ button[onclick="togglePlayAndPause()"] svg {
   position: absolute;
   bottom: 32px;
   right: 96px;
-  z-index: 10;
+  z-index: 15;
 }
 .banner-content {
   position: absolute;
   max-width: 50%;
   bottom: 32px;
   color: #ffffff;
-  z-index: 10;
+  z-index: 15;
 }
 .banner-content-title {
   font-size: 21px;
@@ -134,6 +147,7 @@ button[onclick="togglePlayAndPause()"] svg {
           backdrop-filter: blur(10px);
   border: 1px solid rgba(255, 255, 255, 0.2);
   transition: all 0.3s ease;
+  z-index: 15;
 }
 .banner .swiper-button-next:after,
 .banner .swiper-button-prev:after {
@@ -1817,7 +1831,7 @@ button[onclick="togglePlayAndPause()"] svg {
 }
 
 .information {
-  background: #f5f5f5;
+  background: #ffffff;
   padding: 60px 0;
 }
 .information-content {
