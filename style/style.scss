@@ -147,6 +147,48 @@ button[onclick="togglePlayAndPause()"] {
       color: $gray-color-2;
     }
   }
+
+  // Swiper Navigation Buttons
+  .swiper-button-next,
+  .swiper-button-prev {
+    width: 50px;
+    height: 50px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 50%;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    transition: all 0.3s ease;
+    
+    &:after {
+      font-size: 18px;
+      color: $white-color;
+      font-weight: bold;
+    }
+
+    &:hover {
+      background: rgba(255, 255, 255, 0.2);
+      transform: scale(1.1);
+      border-color: rgba(255, 255, 255, 0.3);
+    }
+
+    &.swiper-button-disabled {
+      opacity: 0.3;
+      cursor: not-allowed;
+      
+      &:hover {
+        transform: none;
+        background: rgba(255, 255, 255, 0.1);
+      }
+    }
+  }
+
+  .swiper-button-next {
+    right: 20px;
+  }
+
+  .swiper-button-prev {
+    left: 20px;
+  }
 }
 
 // ============================================ Banner Responsive Styles
@@ -163,13 +205,18 @@ button[onclick="togglePlayAndPause()"] {
 }
 
 @media (max-width: 768px) {
+  .container {
+    padding: 0 48px;
+  }
+
   .banner {
-    height: 80vh;
+    height: 100vh;
     min-height: 600px;
 
     &-img {
-      height: 100%;
+      height: 70vh;
       object-fit: cover;
+      min-height: 500px;
     }
 
     &-video {
@@ -192,10 +239,33 @@ button[onclick="togglePlayAndPause()"] {
   }
 
   .banner {
+    .btn-video-control {
+      bottom: 20px;
+      right: 20px;
+    }
+
+    // Responsive navigation buttons
+    .swiper-button-next,
+    .swiper-button-prev {
+      width: 45px;
+      height: 45px;
+      
+      &:after {
+        font-size: 16px;
+      }
+    }
+
+    .swiper-button-next {
+      right: 15px;
+    }
+
+    .swiper-button-prev {
+      left: 15px;
+    }
+
     &-content {
       max-width: 90%;
-      top: 45%;
-      transform: translateY(-50%);
+      bottom: 20px;
       padding: 0 20px;
 
       &-title {
@@ -228,6 +298,10 @@ button[onclick="togglePlayAndPause()"] {
 }
 
 @media (max-width: 480px) {
+  .container {
+    padding: 0 24px;
+  }
+
   .banner {
     height: 70vh;
     min-height: 500px;
@@ -252,12 +326,38 @@ button[onclick="togglePlayAndPause()"] {
   }
 
   .banner {
+    .btn-video-control {
+      bottom: 90px;
+      right: 16px;
+    }
+
+    // Mobile navigation buttons
+    .swiper-button-next,
+    .swiper-button-prev {
+      width: 40px;
+      height: 40px;
+      
+      &:after {
+        font-size: 14px;
+      }
+    }
+
+    .swiper-button-next {
+      right: 12px;
+    }
+
+    .swiper-button-prev {
+      left: 12px;
+    }
+
     &-content {
       max-width: 95%;
+      bottom: 120px;
       padding: 0 16px;
+      text-align: center;
 
       &-title {
-        font-size: 16px;
+        font-size: 14px;
       }
 
       &-soubtitle {
@@ -1713,10 +1813,10 @@ button[onclick="togglePlayAndPause()"] {
   }
 
   &-form-description {
-    color: #F5FAF0;
+    color: #f5faf0;
     font-size: 24px;
     font-weight: bold;
-    line-height: 1.110.00000000000001%;
+    line-height: 1.11.00000000000001%;
     letter-spacing: 0.5px;
     margin-bottom: 32px;
   }
@@ -1746,7 +1846,7 @@ button[onclick="togglePlayAndPause()"] {
       .form-input,
       .form-textarea {
         background: transparent;
-        border: 1px solid #F5FAF099;
+        border: 1px solid #f5faf099;
         border-radius: 4px;
         padding: 35px 20px 12px 20px;
         color: $white-color;
@@ -1759,13 +1859,13 @@ button[onclick="togglePlayAndPause()"] {
         box-sizing: border-box;
 
         &::placeholder {
-          color: #F5FAF066;
+          color: #f5faf066;
           font-size: 14px;
         }
 
         &:focus {
           outline: none;
-          border-color: #F5FAF099;
+          border-color: #f5faf099;
           background: rgba(255, 255, 255, 0.08);
           transform: translateY(-1px);
           box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
@@ -1985,19 +2085,19 @@ button[onclick="togglePlayAndPause()"] {
     align-items: center;
     padding-bottom: 30px;
   }
-  
+
   &-logo {
     display: flex;
     align-items: center;
     gap: 24px;
   }
-  
+
   &-brand {
     display: flex;
     align-items: center;
     gap: 12px;
   }
-  
+
   .logo-icon {
     width: 40px;
     height: 40px;
@@ -2005,24 +2105,24 @@ button[onclick="togglePlayAndPause()"] {
     align-items: center;
     justify-content: center;
   }
-  
+
   &-brand img {
     width: auto;
     height: 40px;
     object-fit: contain;
   }
-  
+
   .logo-text {
     display: flex;
     flex-direction: column;
-    
+
     .brand-name {
       color: $white-color;
       font-size: 20px;
       font-weight: 700;
       line-height: 1;
     }
-    
+
     .brand-subtitle {
       color: $white-color;
       font-size: 12px;
@@ -2030,11 +2130,11 @@ button[onclick="togglePlayAndPause()"] {
       letter-spacing: 1px;
     }
   }
-  
+
   &-social {
     display: flex;
     gap: 16px;
-    
+
     .social-link {
       width: 36px;
       height: 36px;
@@ -2043,42 +2143,42 @@ button[onclick="togglePlayAndPause()"] {
       justify-content: center;
       color: $white-color;
       transition: all 0.3s ease;
-      
+
       &:hover {
         color: rgba(255, 255, 255, 0.7);
         transform: translateY(-2px);
       }
     }
   }
-  
+
   &-nav {
     display: flex;
     gap: 32px;
   }
-  
+
   &-link {
     color: $white-color;
     font-size: 14px;
     font-weight: 400;
     text-decoration: none;
     transition: all 0.3s ease;
-    
+
     &:hover {
       color: rgba(255, 255, 255, 0.7);
     }
   }
-  
+
   &-bottom {
     padding-top: 20px;
   }
-  
+
   &-copyright {
     color: rgba(255, 255, 255, 0.8);
     font-size: 12px;
     margin: 0;
     text-align: left;
   }
-  
+
   // Responsive Styles
   @media (max-width: 1024px) {
     &-content {
@@ -2086,39 +2186,39 @@ button[onclick="togglePlayAndPause()"] {
       gap: 24px;
       text-align: center;
     }
-    
+
     &-nav {
       gap: 24px;
     }
   }
-  
+
   @media (max-width: 768px) {
     padding: 32px 0 16px 0;
-    
+
     &-content {
       gap: 20px;
     }
-    
+
     &-logo {
       flex-direction: column;
       gap: 16px;
     }
-    
+
     &-nav {
       flex-wrap: wrap;
       gap: 16px;
       justify-content: center;
     }
-    
+
     &-social {
       gap: 12px;
-      
+
       .social-link {
         width: 32px;
         height: 32px;
       }
     }
-    
+
     &-copyright {
       text-align: center;
       font-size: 11px;
@@ -2128,20 +2228,20 @@ button[onclick="togglePlayAndPause()"] {
 
 // Information Section
 .information {
-  background: #F5F5F5;
+  background: #f5f5f5;
   padding: 60px 0;
-  
+
   &-content {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 40px;
   }
-  
+
   &-column {
     display: flex;
     flex-direction: column;
   }
-  
+
   &-title {
     color: $dark-color;
     font-size: 18px;
@@ -2149,43 +2249,43 @@ button[onclick="togglePlayAndPause()"] {
     margin: 0 0 20px 0;
     line-height: 1.3;
   }
-  
+
   &-info {
     display: flex;
     flex-direction: column;
     gap: 8px;
   }
-  
+
   &-text {
     color: $gray-color;
     font-size: 14px;
     line-height: 1.5;
     margin: 0;
   }
-  
+
   // Responsive Styles
   @media (max-width: 1024px) {
     padding: 50px 0;
-    
+
     &-content {
       grid-template-columns: repeat(2, 1fr);
       gap: 32px;
     }
   }
-  
+
   @media (max-width: 768px) {
     padding: 40px 0;
-    
+
     &-content {
       grid-template-columns: 1fr;
       gap: 24px;
     }
-    
+
     &-title {
       font-size: 16px;
       margin-bottom: 16px;
     }
-    
+
     &-text {
       font-size: 13px;
     }
