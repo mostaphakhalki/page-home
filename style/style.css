@@ -507,7 +507,7 @@ button[onclick="togglePlayAndPause()"] svg {
   height: 568px;
   -o-object-fit: cover;
      object-fit: cover;
-  border-radius: 12px;
+  border-radius: 8px;
   box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
 }
 .content-block-card {
@@ -518,7 +518,7 @@ button[onclick="togglePlayAndPause()"] svg {
   width: 39%;
   background: #ffffff;
   padding: 46px 96px 46px 128px;
-  border-radius: 16px;
+  border-radius: 8px;
   box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
   z-index: 2;
 }
@@ -582,7 +582,7 @@ button[onclick="togglePlayAndPause()"] svg {
     transform: none;
     width: auto;
     padding: 40px 32px;
-    border-radius: 12px;
+    border-radius: 8px;
   }
   .content-block-label {
     font-size: 12px;
@@ -722,21 +722,21 @@ button[onclick="togglePlayAndPause()"] svg {
 }
 .propo-wrapper-img {
   width: 50%;
-  border-top-right-radius: 16px;
-  border-bottom-right-radius: 16px;
+  border-top-right-radius: 8px;
+  border-bottom-right-radius: 8px;
 }
 .propo-wrapper-img img {
   width: 100%;
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
-  border-top-right-radius: 16px;
-  border-bottom-right-radius: 16px;
+  border-top-right-radius: 8px;
+  border-bottom-right-radius: 8px;
 }
 .propo-wrapper-card {
   width: 34%;
-  border-bottom-left-radius: 16px;
-  border-top-left-radius: 16px;
+  border-bottom-left-radius: 8px;
+  border-top-left-radius: 8px;
   padding: 0 96px;
   background-color: #ffffff;
   display: flex;
@@ -853,10 +853,10 @@ button[onclick="togglePlayAndPause()"] svg {
     font-size: 14px;
   }
   .propo-wrapper-img {
-    border-radius: 0 0 12px 12px;
+    border-radius: 0 0 8px 8px;
   }
   .propo-wrapper-img img {
-    border-radius: 0 0 12px 12px;
+    border-radius: 0 0 8px 8px;
     height: 200px;
   }
 }
@@ -928,7 +928,7 @@ button[onclick="togglePlayAndPause()"] svg {
 
 .portfolio-card {
   position: relative;
-  border-radius: 16px;
+  border-radius: 8px;
   overflow: hidden;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
@@ -971,19 +971,24 @@ button[onclick="togglePlayAndPause()"] svg {
 
 .card-content {
   margin-top: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 3px;
 }
 
-.card-title {
+.card-title-header {
   color: #ffffff;
   font-size: 20px;
   font-weight: 700;
-  margin: 0 0 8px 0;
+  position: absolute;
+  top: 0;
 }
 
 .card-subtitle {
   color: rgba(255, 255, 255, 0.8);
   font-size: 14px;
-  margin: 0 0 16px 0;
   line-height: 1.4;
 }
 
@@ -1008,7 +1013,6 @@ button[onclick="togglePlayAndPause()"] svg {
   position: absolute;
   top: 16px;
   right: 16px;
-  background: rgba(255, 255, 255, 0.2);
   border: none;
   border-radius: 50%;
   width: 40px;
@@ -1016,26 +1020,9 @@ button[onclick="togglePlayAndPause()"] svg {
   display: flex;
   align-items: center;
   justify-content: center;
+  background-color: transparent;
   cursor: pointer;
   transition: all 0.3s ease;
-  -webkit-backdrop-filter: blur(10px);
-          backdrop-filter: blur(10px);
-}
-.card-favorite svg {
-  fill: rgba(255, 255, 255, 0.8);
-  transition: fill 0.3s ease;
-}
-.card-favorite:hover {
-  background: rgba(255, 255, 255, 0.3);
-}
-.card-favorite:hover svg {
-  fill: #ffffff;
-}
-.card-favorite.active {
-  background: #ff5733;
-}
-.card-favorite.active svg {
-  fill: #ffffff;
 }
 
 @media (max-width: 1024px) {
@@ -1638,7 +1625,7 @@ button[onclick="togglePlayAndPause()"] svg {
     top: auto;
     transform: none;
     padding: 32px 24px;
-    border-radius: 12px;
+    border-radius: 8px;
   }
   .parlons-form {
     gap: 16px;
@@ -1947,17 +1934,13 @@ button[onclick="togglePlayAndPause()"] svg {
   justify-content: center;
   width: 40px;
   height: 40px;
-  background: rgba(255, 255, 255, 0.1);
   border-radius: 50%;
   color: #ffffff;
   text-decoration: none;
   transition: all 0.3s ease;
-  border: 1px solid rgba(255, 255, 255, 0.2);
 }
 .footer-social .social-link:hover {
-  background: rgba(255, 255, 255, 0.2);
   transform: translateY(-2px);
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
 }
 .footer-social .social-link svg {
   width: 18px;

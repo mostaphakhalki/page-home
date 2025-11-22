@@ -99,7 +99,29 @@ document.addEventListener("DOMContentLoaded", function () {
   favoriteButtons.forEach((btn) => {
     btn.addEventListener("click", function (e) {
       e.stopPropagation();
-      this.classList.toggle("active");
+      
+      // Find the empty and filled heart SVGs within this button
+      const heartEmpty = this.querySelector('.heart-empty');
+      const heartFilled = this.querySelector('.heart-filled');
+      
+      // Toggle visibility between the two SVGs
+      if (heartEmpty && heartFilled) {
+        if (heartEmpty.style.display === 'none') {
+          // Currently showing filled heart, switch to empty heart
+          heartEmpty.style.display = 'block';
+          heartFilled.style.display = 'none';
+        } else {
+          // Currently showing empty heart, switch to filled heart
+          heartEmpty.style.display = 'none';
+          heartFilled.style.display = 'block';
+        }
+      }
+      
+      // Optional: Add a small animation effect
+      this.style.transform = "scale(0.9)";
+      setTimeout(() => {
+        this.style.transform = "scale(1)";
+      }, 150);
     });
   });
 
